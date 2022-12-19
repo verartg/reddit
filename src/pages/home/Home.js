@@ -58,27 +58,31 @@ function Home() {
                     <h2>Hottest posts</h2>
                     <h4>on Reddit right now</h4>
                     <div className="flexgrid">
-                            {reddits.map((reddit) => {
-                                return <article key={reddit.data.id}>
-                                    <a href={`https://www.reddit.com${reddit.data.permalink}`} className="articletitles"><h3>
+                        {reddits.map((reddit) => {
+                            return <article key={reddit.data.id}>
+                                <a href={`https://www.reddit.com${reddit.data.permalink}`} className="articletitles">
+                                    <h3>
                                         {reddit.data.title}</h3></a>
-                                    <div className="topspace">
-                                        <Link
-                                            to={`/subreddit/${reddit.data.subreddit}`}><p className="redtext">{reddit.data.subreddit_name_prefixed}</p></Link>
-                                        <p className="commentsups">Comments {reddit.data.num_comments} - Ups {reddit.data.ups}</p>
-                                    </div>
-                                </article>
-                            })}
+                                <div className="topspace">
+                                    <Link
+                                        to={`/subreddit/${reddit.data.subreddit}`}><p
+                                        className="redtext">{reddit.data.subreddit_name_prefixed}</p></Link>
+                                    <p className="commentsups">Comments {reddit.data.num_comments} -
+                                        Ups {reddit.data.ups}</p>
+                                </div>
+                            </article>
+                        })}
                     </div>
                 </div>
+                <footer className="footer">
+                    <div className="margindiv">
+                        <p>In opdracht van NOVI Hogeschool © 2022</p>
+                    </div>
+                </footer>
             </main>
-            <footer className="footer">
-                <div className="margindiv">
-                    <p>In opdracht van NOVI Hogeschool © 2022</p>
-                </div>
-            </footer>
+
         </>
     );
 }
 
-    export default Home;
+export default Home;

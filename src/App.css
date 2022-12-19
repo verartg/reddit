@@ -7,11 +7,10 @@
     --white: #FFFFFF;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
     color: var(--black);
-
 }
 
 p {
